@@ -7,4 +7,11 @@ export default defineConfig({
   antd: { mobile: false },
   fastRefresh: {},
   mfsu: {},
+  proxy:{
+    '/api/': {
+      target: 'your pre url',
+      changeOrigin: true,
+      pathRewrite: { '^': '' },
+    },
+  },
 });
